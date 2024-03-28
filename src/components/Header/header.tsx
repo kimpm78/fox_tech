@@ -13,9 +13,8 @@ const Header: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
     localStorage.getItem('isLoggedIn') === 'true',
   );
-
+  // ローカルのストレージからログイン情報削除
   const handleLogout = () => {
-    // ローカルのストレージからログイン情報削除
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
@@ -75,13 +74,11 @@ const Header: React.FC = () => {
                       ログアウト
                     </Button>
                   ) : (
-                    <Button
-                      href="/SignIn"
-                      className="nav-submit"
-                      variant="dark"
-                    >
-                      ログイン
-                    </Button>
+                    <Nav.Link href="/SignIn">
+                      <Button className="nav-submit" variant="dark">
+                        ログイン
+                      </Button>
+                    </Nav.Link>
                   )}
                 </Form>
               </Offcanvas.Body>

@@ -54,3 +54,9 @@
     visibility: hidden;
   }
 }
+
+/* ボタンにホバー及びフォーカス効果を追加 */
+.nav-submit:hover,
+.nav-submit:focus {
+  background-color: #343a40;
+}
