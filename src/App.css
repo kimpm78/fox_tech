@@ -26,3 +26,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/* 404 エラー属性 */
+.notfound-container {
+  height: 700px;
+  background-color: #ffcfba;
+}

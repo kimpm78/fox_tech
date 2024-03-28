@@ -1,7 +1,7 @@
-import { Carousel, Col, Container, Row } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
 
-import './editor.css'
+import './editor.css';
 
 const Editor = () => {
   return (
@@ -57,7 +57,7 @@ const Editor = () => {
         </Row>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default Editor
+export default Editor;

@@ -1,35 +1,35 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import './signUp.css'
-import { MdErrorOutline } from 'react-icons/md'
+import './signUp.css';
+import { MdErrorOutline } from 'react-icons/md';
 
 const SignUp: React.FC = () => {
-  const [email, setEmail] = useState('')
-  const [nickname, setNickname] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('');
+  const [nickname, setNickname] = useState('');
+  const [password, setPassword] = useState('');
 
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [agree, setAgree] = useState(false)
-  const [error, setError] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [agree, setAgree] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSignUp = () => {
+  const handleError = () => {
     if (!email || !nickname || !password || !confirmPassword) {
-      setError('すべての項目が入力されていません')
-      return
+      setError('すべての項目が入力されていません');
+      return;
     }
     if (password !== confirmPassword) {
-      setError('パスワードが一致しません')
-      return
+      setError('パスワードが一致しません');
+      return;
     }
     if (!agree) {
-      setError('利用規約に同意してください')
-      return
+      setError('利用規約に同意してください');
+      return;
     }
     // 회원가입 로직 구현
     // 여기서 회원가입 요청을 보내고, 성공적으로 가입되었다면 로그인 페이지로 이동하는 등의 작업을 수행할 수 있습니다.
     // 예: history.push('/SignIn');
-  }
+  };
 
   return (
     <div className="signup-container">
@@ -42,7 +42,7 @@ const SignUp: React.FC = () => {
       </div>
       <div className="signup-right">
         <h2>アカウントを作成</h2>
-        <div className="login-link">
+        <div className="signup-link">
           <p>
             すでにアカウントをお持ちですか？ <Link to="/SignIn">Sign IN</Link>
           </p>
@@ -89,6 +89,7 @@ const SignUp: React.FC = () => {
         </div>
         <div className="checkbox">
           <input
+            className="signup-box "
             type="checkbox"
             id="agree"
             checked={agree}
@@ -100,18 +101,18 @@ const SignUp: React.FC = () => {
             ものとみなされます。
           </label>
         </div>
-        <button className="signup-button" onClick={handleSignUp}>
+        <button className="signup-button" onClick={handleError}>
           アカウント作成
         </button>
         {error && (
-          <div className="error-message">
+          <div className="error-message shake">
             <MdErrorOutline className="error-icon" />
             {error}
           </div>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

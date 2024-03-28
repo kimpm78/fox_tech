@@ -1,7 +1,14 @@
+/* コンテナ */
 .signup-container {
   display: flex;
   justify-content: center;
   align-itmes: center;
+}
+
+/* 画面：左はイメージ、右：テキスト　*/
+.signup-image {
+  width: 100%;
+  height: 100%;
 }
 
 .signup-left {
@@ -20,9 +27,11 @@
   }
 }
 
-.signup-image {
-  width: 100%;
-  height: 100%;
+/* 幅が900pxになると、左のイメージは隠して flexが初期値になる */
+@media screen and (max-width: 900px) {
+  .signup-left {
+    flex: initial;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -30,6 +39,8 @@
     display: none;
   }
 }
+
+/* inputの属性 */
 
 .input-group {
   margin-bottom: 50px;
@@ -48,6 +59,7 @@
   border-radius: 5px;
 }
 
+/* checkboxの属性 */
 .checkbox {
   margin-bottom: 15px;
 }
@@ -56,6 +68,11 @@
   font-size: 14px;
 }
 
+.signup-box {
+  margin: 10px;
+}
+
+/* buttonの属性 */
 .signup-button {
   width: 100%;
   padding: 10px;
@@ -70,17 +87,19 @@
   background-color: #0056b3;
 }
 
+/* linkの属性 */
 .login-link {
   margin-top: 15px;
   font-size: 14px;
 }
 
-.login-link a {
-  color: #007bff;
+.signup-link a {
+  color: #4ba67a;
+  font-weight: 600;
   text-decoration: none;
 }
 
-.login-link a:hover {
+.signup-link a:hover {
   text-decoration: underline;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import {
   Button,
   Container,
@@ -6,10 +6,20 @@ import {
   Nav,
   Navbar,
   Offcanvas,
-} from 'react-bootstrap'
-import './header.css'
+} from 'react-bootstrap';
+import './header.css';
 
 const Header: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
+    localStorage.getItem('isLoggedIn') === 'true',
+  );
+
+  const handleLogout = () => {
+    // ローカルのストレージからログイン情報削除
+    localStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);
+  };
+
   return (
     <>
       {['xl'].map((expand) => (
@@ -33,9 +43,12 @@ const Header: React.FC = () => {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
-              <Offcanvas.Header closeButton>
+              <Offcanvas.Header
+                closeButton
+                style={{ backgroundColor: '#f98351', height: '100px' }}
+              >
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Fox_Tech
+                  Fox Tech
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -53,9 +66,23 @@ const Header: React.FC = () => {
                     placeholder="Search"
                     aria-label="Search"
                   />
-                  <Button href="/SignIn" className="nav-submit" variant="dark">
-                    ログイン
-                  </Button>
+                  {isLoggedIn ? (
+                    <Button
+                      className="nav-submit"
+                      variant="dark"
+                      onClick={handleLogout}
+                    >
+                      ログアウト
+                    </Button>
+                  ) : (
+                    <Button
+                      href="/SignIn"
+                      className="nav-submit"
+                      variant="dark"
+                    >
+                      ログイン
+                    </Button>
+                  )}
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
@@ -63,7 +90,7 @@ const Header: React.FC = () => {
         </Navbar>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

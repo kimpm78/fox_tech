@@ -36,7 +36,6 @@
 .sub-image:hover {
   opacity: 0.5;
   transition: transform 150ms;
-  transform: translateY(-10px);
 }
 
 .sub-container {
@@ -48,13 +47,33 @@
   align-items: center;
   text-align: left;
   gap: 15px;
+  /* background-color: #ffcfba; */
 }
 
-.date_text {
+.date-text {
   color: #4ba67a;
   font-weight: 500;
 }
 
-.carousel-control-prev {
-  left: -100px;
+/* サブイメージ属性*/
+
+.sub-image {
+  display: 'flex';
+  align-items: 'center';
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 990px) {
+  .sub-image {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sub-image {
+    font-size: 13px;
+  }
 }

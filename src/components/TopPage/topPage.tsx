@@ -1,11 +1,11 @@
-import { Carousel } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap';
 
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
-import './topPage.css'
+import './topPage.css';
 
 const TopPage = () => {
   return (
@@ -120,45 +120,78 @@ const TopPage = () => {
         </Carousel>
       </Row>
       <Row className="sub-container">
-        <Col className="sub_text">
-          <Image
-            className="sub-image"
-            src="/src/assets/main_sub1.jpg"
-            rounded
-            alt="sub1"
-          />
-          <span>
-            Rog Zephyrus G16
-            GU605をレビューデザイン・性能・最薄と理想的すぎるゲーミングノートPC
-          </span>
+        <Col className="sub-text">
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              backgroundColor: '#f5f5f5',
+              padding: '10px',
+              borderRadius: '10px',
+            }}
+          >
+            <Image
+              className="sub-image"
+              src="/src/assets/main_sub1.jpg"
+              rounded
+              alt="sub1"
+            />
+            <a href="https://makuring.jp/pc/rog-zephyrus-g16/">
+              Rog Zephyrus G16
+              GU605をレビューデザイン・性能・最薄と理想的すぎるゲーミングノートPC
+            </a>
+          </div>
         </Col>
         <Col className="sub_text">
-          <Image
-            className="sub-image"
-            src="/src/assets/main_sub2.jpg"
-            rounded
-            alt="sub2"
-          />
-          <span>
-            HP Spectre x360
-            14をレビュー上質感と使いやすさ両立の13.5インチ2in1ノートPC
-          </span>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              backgroundColor: '#f5f5f5',
+              padding: '10px',
+              borderRadius: '10px',
+            }}
+          >
+            <Image
+              className="sub-image"
+              src="/src/assets/main_sub2.jpg"
+              rounded
+              alt="sub2"
+            />
+            <a href="https://makuring.jp/pc/hp-spectre-x360-14/">
+              HP Spectre x360
+              14をレビュー上質感と使いやすさ両立の13.5インチ2in1ノートPC
+            </a>
+          </div>
         </Col>
         <Col className="sub_text">
-          <Image
-            className="sub-image"
-            src="/src/assets/main_sub3.jpg"
-            rounded
-            alt="sub3"
-          />
-          <span>
-            HP Elite Dragonfily
-            G2レビュー総合力にすぐれる5G/LTE対応の13インチ2in1ノートPC
-          </span>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              backgroundColor: '#f5f5f5',
+              padding: '10px',
+              borderRadius: '10px',
+            }}
+          >
+            <Image
+              className="sub-image"
+              src="/src/assets/main_sub3.jpg"
+              rounded
+              alt="sub3"
+            />
+            <a href="https://makuring.jp/pc/hp-elite-dragonfly/">
+              HP Elite Dragonfily
+              G2レビュー総合力にすぐれる5G/LTE対応の13インチ2in1ノートPC
+            </a>
+          </div>
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default TopPage
+export default TopPage;

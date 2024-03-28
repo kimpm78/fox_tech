@@ -55,6 +55,26 @@ const data = {
       imageSrc: '/src/assets/interface_1.svg',
     },
   ],
-}
+  myProducts: [
+    {
+      id: '1',
+      title: `アップル M2搭載の15型「MacBook Air」`,
+      timeAgo: `2023.10.18`,
+      imageSrc: '/src/assets/macbook.jpg',
+    },
+    {
+      id: '2',
+      title: `ASUS、重さ約608gの7型ポータブルゲーム機「ROG Ally」を本日6月14日から発売`,
+      timeAgo: `2023.06.14`,
+      imageSrc: '/src/assets/myproduct2.jpg',
+    },
+    {
+      id: '3',
+      title: `「Thunderbolt 5」登場。最大120Gbps転送が可能な最強インターフェイス`,
+      timeAgo: `2023.12.23`,
+      imageSrc: '/src/assets/myproduct3.jpg',
+    },
+  ],
+};
 
-export default data
+export default data;

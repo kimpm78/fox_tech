@@ -1,6 +1,6 @@
-import { Col, Row } from 'react-bootstrap'
-import './footer.css'
-import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { Col, Row } from 'react-bootstrap';
+import './footer.css';
+import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
       />
       <hr className="border border-white border-1 opacity-50"></hr>
       <div className="footer-wrapper">
-        <Row>
+        <Row className="">
           <Col className="footer-column">
             <label className="footer-title">ABOUT US</label>
             <p className="footer-text">
@@ -31,7 +31,7 @@ const Footer = () => {
           </Col>
           <Col>
             <label className="footer-title">QUICK LINK</label>
-            <ul>
+            <ul className="footer-ul">
               <li>
                 <a className="footer-link" href="#">
                   HOME
@@ -53,18 +53,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#4">
+                <a className="footer-link" href="/SignUp">
                   SIGN UP
                 </a>
               </li>
             </ul>
-            <div>
-              <img
-                className="fox_img2"
-                src="/src/assets/fox_1.svg"
-                alt="fox_image2"
-              />
-            </div>
           </Col>
           <Col>
             <div>
@@ -72,19 +65,26 @@ const Footer = () => {
                 豊富なコンピュータの世界を 知らせてくれるFox tech！
               </h4>
             </div>
-            <div className="footer-icon">
-              <a href="https://github.com">
-                <FaGithub className="github-icon" />
-              </a>
-              <a href="https://www.instagram.com/">
-                <FaInstagram className="social-icon" />
-              </a>
-              <a href="https://www.facebook.com/">
-                <FaFacebook className="social-icon" />
-              </a>
-              <a href="https://www.youtube.com/">
-                <FaYoutube className="social-icon" />
-              </a>
+            <div className="footer-fox">
+              <img
+                className="fox_img2"
+                src="/src/assets/fox_1.svg"
+                alt="fox_image2"
+              />
+              <div className="footer-icon">
+                <a href="https://github.com">
+                  <FaGithub className="github-icon" />
+                </a>
+                <a href="https://www.instagram.com/">
+                  <FaInstagram className="social-icon" />
+                </a>
+                <a href="https://www.facebook.com/">
+                  <FaFacebook className="social-icon" />
+                </a>
+                <a href="https://www.youtube.com/">
+                  <FaYoutube className="social-icon" />
+                </a>
+              </div>
             </div>
           </Col>
         </Row>
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
