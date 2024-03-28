@@ -1,0 +1,28 @@
+#root {
+  max-width: 1920px;
+}
+
+.alatsi-regular {
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom-element {
+  background-color: F98351;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main_container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}

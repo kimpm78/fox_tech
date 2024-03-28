@@ -1,0 +1,56 @@
+.bg-color {
+  background-color: #f98351;
+  height: 100px;
+}
+
+.logo {
+  width: 150px;
+  height: 50px;
+}
+
+.nav-container {
+  font-weight: 600;
+  gap: 50px;
+}
+
+.nav-input {
+  width: 90%;
+  height: 40px;
+}
+
+.nav-submit {
+  width: 50%;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    font-size: 10px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-container {
+    font-size: 14px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-submit {
+    /* font-size: 5px; */
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-submit {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-input {
+    visibility: hidden;
+  }
+}

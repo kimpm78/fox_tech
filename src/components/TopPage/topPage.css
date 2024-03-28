@@ -1,0 +1,60 @@
+.text_1 {
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ffb190;
+}
+
+.text-container {
+  display: grid;
+}
+
+.date {
+  color: #4ba67a;
+  margin-left: 40px;
+}
+.top-container {
+  padding-top: 50px;
+}
+
+.main-image {
+  width: 550px;
+  height: 550px;
+}
+
+.sub-image {
+  width: 150px;
+  height: 150px;
+  will-change: transform;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.sub-image:hover {
+  opacity: 0.5;
+  transition: transform 150ms;
+  transform: translateY(-10px);
+}
+
+.sub-container {
+  padding-top: 30px;
+}
+
+.sub_text {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+}
+
+.date_text {
+  color: #4ba67a;
+  font-weight: 500;
+}
+
+.carousel-control-prev {
+  left: -100px;
+}

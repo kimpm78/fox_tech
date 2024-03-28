@@ -1,0 +1,21 @@
+.about_container {
+  height: 500px;
+  border-radius: 15px;
+  margin: 100px;
+}
+
+.about_main_image {
+  width: 55%;
+  margin: 0 100px;
+  border-radius: 20px;
+}
+
+.about_bg {
+  display: flex;
+}
+
+.about_main_text {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 90px;
+}

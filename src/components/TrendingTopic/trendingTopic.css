@@ -1,0 +1,26 @@
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 100px;
+}
+
+.card_main_text {
+  margin-bottom: 70px;
+}
+
+.card_text {
+  background-color: #f4f4f4;
+}
+
+.cards {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.cards:hover {
+  opacity: 0.5;
+  transition: transform 150ms;
+  transform: translateY(-10px);
+}
