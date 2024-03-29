@@ -1,3 +1,12 @@
+# デジタル商品のレビューブログ
+
+パソコンに関しているものを紹介するブログです。
+最近のトレンドを紹介させていただきます。
+
+## 起動
+
+- https://kimpm78.github.io/fox_tech/
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
