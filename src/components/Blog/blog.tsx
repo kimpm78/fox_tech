@@ -23,12 +23,12 @@ const Blog = () => {
     currentPage * cardsPerPage,
   );
 
-  // 이전 페이지로 이동
+  // 以前のページに移動
   const goToPrevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
-  // 다음 페이지로 이동
+  // 次のページに移動
   const goToNextPage = () => {
     setCurrentPage((prevPage) =>
       Math.min(prevPage + 1, Math.ceil(data.videos.length / cardsPerPage)),
@@ -56,19 +56,20 @@ const Blog = () => {
                 </div>
                 <Card.Body>
                   <Card.Title className="card-title">
-                    <h5>{truncateText(card.title, 30)}</h5>
+                    <h5 className="blog-title">
+                      {truncateText(card.title, 50)}
+                    </h5>
                   </Card.Title>
                   <div
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      marginTop: '20px',
-                      gap: '20px',
+                      gap: '5%',
                     }}
                   >
                     <Image className="blog_img" src={card.imageSrc} />
-                    <span>{card.author}</span>
-                    <span>・{card.timeAgo}</span>
+                    <span className="blog-author">{card.author}</span>
+                    <span className="blog-time">・{card.timeAgo}</span>
                   </div>
                 </Card.Body>
               </Card>

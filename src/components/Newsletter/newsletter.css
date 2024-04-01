@@ -1,3 +1,10 @@
+/* newsletter　コンテナ */
+.newsletter-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffcfba;
+}
+
 .input_newsletter {
   display: block;
   width: 430px;
@@ -16,13 +23,6 @@
   transition:
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-}
-
-/* newsletter.css */
-
-.newsletter-container {
-  display: flex;
-  align-items: center;
 }
 
 /* 子供の要素が残りの空間を埋められるようにする */
@@ -59,6 +59,7 @@
 
 .fox-laptop {
   margin: 0 auto;
+  width: 25vw;
 }
 
 @media (max-width: 1024px) {

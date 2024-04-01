@@ -40,11 +40,15 @@ const Header: React.FC = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-5 nav-container">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="#TrendingTopic">Trending</Nav.Link>
-                <Nav.Link href="#Blog">Blog</Nav.Link>
-                <Nav.Link href="#About">About</Nav.Link>
-                <Nav.Link href="/SignUp">SignUp</Nav.Link>
+                {!['/SignIn', '/SignUp'].includes(window.location.pathname) && (
+                  <>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="#TrendingTopic">Trending</Nav.Link>
+                    <Nav.Link href="#Blog">Blog</Nav.Link>
+                    <Nav.Link href="#About">About</Nav.Link>
+                    <Nav.Link href="/SignUp">SignUp</Nav.Link>
+                  </>
+                )}
               </Nav>
               <Form className="d-flex">
                 <Form.Control

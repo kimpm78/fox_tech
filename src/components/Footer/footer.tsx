@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="footer-text">
               コンピュータを好きな人向けのレビュー！
               最新ニュース、製品紹介をレビューを頂いております。
-              スポンサーに関しては下記のメールアドレスに ご連絡お願い致します。
+              スポンサーに関しては下記のメールアドレスにご連絡お願い致します。
             </p>
             <label className="footer-title">ADDRESS</label>
             <p className="footer-text">
@@ -29,7 +29,7 @@ const Footer = () => {
             <label className="footer-title">PHONES</label>
             <p className="footer-text">+81) 090-1234-8697</p>
           </Col>
-          <Col>
+          <Col className="footer-column-2">
             <label className="footer-title">QUICK LINK</label>
             <ul className="footer-ul">
               <li>
@@ -38,18 +38,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#1">
-                  TRENDING TOPIC
+                <a className="footer-link" href="#TrendingTopic">
+                  TRENDING
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#2">
-                  EDITOR'S PICKED
+                <a className="footer-link" href="#Blog">
+                  BLOG
                 </a>
               </li>
               <li>
-                <a className="footer-link" href="#3">
-                  BLOG & YOUTUBE REVIEW
+                <a className="footer-link" href="#About">
+                  ABOUT
                 </a>
               </li>
               <li>
@@ -61,39 +61,39 @@ const Footer = () => {
           </Col>
           <Col>
             <div>
-              <h4 className="footer-sub-text">
+              <label className="footer-sub-text">
                 豊富なコンピュータの世界を 知らせてくれるFox tech！
-              </h4>
+              </label>
             </div>
-            <div className="footer-fox">
+            <div className="footer-link-container">
               <img
-                className="fox_img2"
+                className="footer-fox-img"
                 src="/src/assets/fox_1.svg"
-                alt="fox_image2"
+                alt="fox_image"
               />
               <div className="footer-icon">
-                <a href="https://github.com">
-                  <FaGithub className="github-icon" />
+                <a className="footer-sub-link" href="https://github.com">
+                  <FaGithub className="github-icon" size={30} />
                 </a>
-                <a href="https://www.instagram.com/">
-                  <FaInstagram className="social-icon" />
+                <a
+                  className="footer-sub-link"
+                  href="https://www.instagram.com/"
+                >
+                  <FaInstagram className="social-icon" size={30} />
                 </a>
-                <a href="https://www.facebook.com/">
-                  <FaFacebook className="social-icon" />
+                <a className="footer-sub-link" href="https://www.facebook.com/">
+                  <FaFacebook className="social-icon" size={30} />
                 </a>
-                <a href="https://www.youtube.com/">
-                  <FaYoutube className="social-icon" />
+                <a className="footer-sub-link" href="https://www.youtube.com/">
+                  <FaYoutube className="social-icon" size={30} />
                 </a>
               </div>
             </div>
           </Col>
         </Row>
         <div>
-          <p
-            className="footer-text"
-            style={{ textAlign: 'center', marginTop: '50px' }}
-          >
-            © 2023 Fox Tech. All rights reserved.
+          <p className="footer-licenses">
+            © 2024 Fox Tech. All rights reserved.
           </p>
         </div>
       </div>

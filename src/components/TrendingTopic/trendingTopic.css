@@ -23,3 +23,12 @@
   transition: transform 150ms;
   transform: translateY(-10px);
 }
+
+.topic-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topic-time {
+  font-size: 12px;
+}

@@ -32,3 +32,9 @@
   height: 700px;
   background-color: #ffcfba;
 }
+
+/* ドットカラー変更 */
+
+li::marker {
+  color: #fff;
+}

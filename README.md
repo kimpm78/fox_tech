@@ -30,10 +30,12 @@
 ### ライブラリ
 
 - eslint @8.57.0
+- jQuery
 - react-router-dom @6.22.3
 - react-scroll @1.9.0
 - react-icons
 - prettier @3.2.5
+- Popper.js
 
 ### 開発環境
 

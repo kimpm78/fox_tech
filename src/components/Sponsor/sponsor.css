@@ -3,12 +3,16 @@
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 1140px;
+  width: 80%;
 }
 
 .slider::before,
 .slider::after {
-  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    #ffcfba 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   content: '';
   height: 100%;
   position: absolute;
@@ -32,6 +36,7 @@
   animation: scroll 50s linear infinite;
   display: flex;
   width: calc(250px * 20);
+  background-color: #ffcfba;
 }
 
 .slider .slide-track:hover {
@@ -53,7 +58,13 @@
 }
 
 .sponsor-title {
-  font-size: 90px;
-  margin: 100px;
+  font-size: 6vw;
+  padding: 100px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .sponsor-title {
+    font-size: 60px;
+  }
 }

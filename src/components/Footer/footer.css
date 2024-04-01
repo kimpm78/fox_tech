@@ -1,6 +1,8 @@
+/* footer コンテナ */
 .footer-container {
   padding: 40px 60px;
   background: #f98351;
+  width: 100vw;
 }
 
 .footer-wrapper {
@@ -23,19 +25,22 @@
 }
 
 .footer-text {
-  line-height: 18px;
+  line-height: 1.5vw;
   margin-top: 15px;
-  font-size: 14px;
-  color: white;
+  font-size: 1.2vw;
+  color: #fff;
 }
 
-.footer-ul {
+.footer-licenses {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
 }
 
 .footer-link {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 1.5vw;
   text-decoration: none;
 
   &:hover {
@@ -45,14 +50,19 @@
   cursor: pointer;
 }
 
-.footer-title {
-  font-size: 36px;
-  color: #ffffff;
+.footer-sub-link {
+  color: #fff;
+  padding: 50px 0 0 0px;
+  &:hover {
+    color: #ff9c00;
+    transition: 200ms ease-in;
+  }
 }
 
-.fox_img2 {
-  width: 200px;
-  height: 200px;
+.footer-title {
+  font-size: 2.5vw;
+  color: #fff;
+  width: 100%;
 }
 
 .footer-grid {
@@ -62,30 +72,55 @@
   height: 900px;
 }
 
+.footer-column-2 {
+  margin: 0 0 0 5%;
+}
+
 .footer-sub-text {
-  font-size: 30px;
-  margin-top: 200px;
+  font-size: 2vw;
+  margin-top: 20vw;
   text-align: center;
   color: #fff;
 }
 
 .footer-icon {
   display: flex;
-  gap: 20px;
-  /* margin: 150px 100px 0; */
-
+  gap: 10%;
   &:hover {
     color: #fff;
     transition: 200ms ease-in;
   }
 }
 
+/* テキストのレスポンシブのサイズ */
+
+@media screen and (max-width: 767px) {
+  .editor-main-title {
+    font-size: 60px;
+  }
+  .editor-text .editor-fullName {
+    font-size: 14px;
+  }
+  .editor-title {
+    padding: 5% 0 5% 0;
+  }
+  .text-title-frame {
+    padding: 20px 0 100px 0px;
+  }
+}
+
+/* Logo & Img */
+
+.footer-link-container {
+  display: flex;
+}
+
+.footer-fox-img {
+  width: 10vw;
+}
+
 @media (max-width: 1024px) {
   .footer-grid {
     padding-left: 20px;
   }
-}
-
-.footer-fox {
-  display: flex;
 }

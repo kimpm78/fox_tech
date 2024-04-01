@@ -1,35 +1,37 @@
-import { Card, Col, Container, Row } from 'react-bootstrap'
-import './instagram.css'
+import React from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 
-const Instagram = () => {
+import data from '../../libs/models/data';
+import './instagram.css';
+
+const Instagram: React.FC = () => {
   return (
-    <Container className="instagram_bg">
-      <div>
-        <div style={{ textAlign: 'center' }}>
-          <h3 style={{ color: '#4ba67a' }}>Follow Us</h3>
+    <>
+      <div className="instagram-container">
+        <div className="text-title-frame">
+          <label className="instagram-title-top ">Follow Us</label>
           <img
-            className="Instagram_icon"
+            className="instagram_icon"
             src="/src/assets/Instagram.svg"
             alt="fox_image2"
           />
-          <h1>Instagram</h1>
+          <label className="instagram-title-bottom">Instagram</label>
         </div>
-        <div className="about_container">
+        <div className="instagram-card-container">
           <Row xs={1} md={2} className="g-4">
-            {Array.from({ length: 2 }).map((_, idx) => (
-              <Col key={idx}>
+            {data.followers.map((follower) => (
+              <Col key={follower.id}>
                 <Card>
-                  <Card.Img src="/src/assets/follow_us1.jpg"></Card.Img>
-                  <Card.Body>
-                    <Card.Title
-                      style={{ textAlign: 'center', marginBottom: '20px' }}
-                    >
-                      フィリッパ オールドリッジ
+                  <Card.Img
+                    className="instagram-card-image"
+                    src={follower.imageSrc}
+                    alt="follower_image"
+                  ></Card.Img>
+                  <Card.Body style={{ margin: '0 0 0 0' }}>
+                    <Card.Title className="instagram_title">
+                      {follower.name}
                     </Card.Title>
-                    <span style={{ fontSize: '16px', padding: '5px' }}>
-                      PUBG 最強プレイヤーは PUBGの世界大会出場経験を
-                      持つプロプレイヤー選手です。
-                    </span>
+                    <span className="instagram_text">{follower.text}</span>
                   </Card.Body>
                 </Card>
               </Col>
@@ -37,8 +39,8 @@ const Instagram = () => {
           </Row>
         </div>
       </div>
-    </Container>
-  )
-}
+    </>
+  );
+};
 
-export default Instagram
+export default Instagram;

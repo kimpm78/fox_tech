@@ -1,20 +1,75 @@
-.about_container {
-  height: 500px;
-  border-radius: 15px;
-  margin: 100px;
+/* About メインコンテナ */
+.about-container {
+  background-color: #fbc0a6;
+  display: grid;
 }
 
-.about_main_image {
+.about-main-text {
+  font-size: 70px;
+  color: #4ba67a;
+}
+
+.about-main-image {
   width: 55%;
   margin: 0 0 0 35%;
   border-radius: 20px;
 }
 
-.about_bg {
-  display: flex;
-}
-
 .about_main_text {
   margin: 50px 100px 50px 100px;
   font-size: 90px;
+}
+
+.about-span {
+  margin: 50px 10% 90px 35%;
+}
+
+/* font アニメーション */
+.about-sub-title {
+  font-size: 6vw;
+}
+
+.about-main-text-top {
+  font-size: 5vw;
+  margin: 0 0 0 6vw;
+}
+
+.about-main-text-bottom {
+  font-size: 5vw;
+  margin: 0 0 5vw 15vw;
+}
+
+.about-sub-text-top {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+  margin: 20px 0px 20px 100px;
+}
+
+.about-sub-text-bottom {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0px 0px 30px 200px;
+}
+
+@media screen and (max-width: 767px) {
+  .about_main_text {
+    font-size: 60px;
+  }
+  .about-sub-text-top {
+    font-size: 30px;
+  }
+  .about-sub-text-bottom {
+    font-size: 30px;
+  }
+  .about-span {
+    font-size: 14px;
+  }
+}
+
+/* カードのコンテナ */
+
+.card-container {
+  margin: 0px 20px 150px 20px;
 }
